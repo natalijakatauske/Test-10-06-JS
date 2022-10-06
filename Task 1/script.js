@@ -16,13 +16,9 @@ document.querySelector('form').addEventListener('submit', calculateFunction)
 function calculateFunction(event) {
     event.preventDefault()
     const result = document.getElementById('search').value
-    console.log(result)
     const lbConvertor = result * 2.2046
-    console.log(lbConvertor)
     const gConvertot = result * 0.0010000
-    console.log(gConvertot)
     const ozConvertor = result * 35.274
-    console.log(ozConvertor)
 
     const card = document.createElement('div')
     card.style.textAlign = 'center'
