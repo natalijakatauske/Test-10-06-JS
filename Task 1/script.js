@@ -28,8 +28,10 @@ function calculateFunction(event) {
     card.style.textAlign = 'center'
     document.getElementById('output').appendChild(card)
     const lbOutputInfo = document.createElement('h2')
+    lbOutputInfo.style.paddingBottom = '10px'
     lbOutputInfo.innerText = `${lbConvertor} lb`
     const gOutputInfo = document.createElement('h2')
+    gOutputInfo.style.paddingBottom = '10px'
     gOutputInfo.innerText = `${gConvertot} g`
     const ozOutputInfo = document.createElement('h2')
     ozOutputInfo.innerText = `${ozConvertor} oz`
