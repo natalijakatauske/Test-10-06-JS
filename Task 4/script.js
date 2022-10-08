@@ -11,14 +11,12 @@ bent minimalų stilių;
 
 const ENDPOINT = 'cars.json';
 
-console.log('labas')
-
 fetch(ENDPOINT)
 .then(x => x.json())
 .then(data => {
     for (let i = 0; i < data.length; i++) {
         const card = document.createElement('div')
-        card.style.border = '3px solid black'
+        card.style.border = '3px double black'
         card.style.marginTop = '10px'
         document.getElementById('output').append(card)
 
@@ -31,8 +29,6 @@ fetch(ENDPOINT)
         card.append(brandInfo)
 
             for (let j = 0; j < data[i].models.length; j++) {
-                console.log(data[i].models[j])
-
                 const modelInfo = document.createElement('li')
                 modelInfo.style.listStyle = 'square'
                 modelInfo.style.paddingLeft = '10px'

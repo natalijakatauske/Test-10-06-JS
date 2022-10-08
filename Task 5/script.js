@@ -20,8 +20,6 @@ const users = [
   { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
 ];
 
-// console.log('labas')
-
 function filterDogOwers(data) {
   for (let i=0; i < data.length; i++) {
     if (data[i].hasDog) {
