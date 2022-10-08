@@ -20,18 +20,12 @@ const users = [
   { id: '9', name: 'Daniel Cane', age: 51 },
 ];
 
-// console.log('labas')
-
 function getUserAverageAge(data) {
   const usersAges = data.map(data => data.age)
-  // console.log(usersAges)
   console.log(usersAges.reduce((a, v) => a + v, 0) / data.length)
   }
-  
 getUserAverageAge(users)
 
-// const number = [1, 5, 10, 20]
-// console.log(number.reduce((a, v) => a + v))
 
 function getUsersNames(data) {
   const usersNames = data.map(data => data.name)
