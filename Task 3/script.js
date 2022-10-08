@@ -12,8 +12,6 @@ Pastaba: Informacija apie user'į (jo kortelė) bei turi turėti bent minimalų 
 
 const ENDPOINT = 'https://api.github.com/users';
 
-// console.log('labas')
-
 document.getElementById('btn').addEventListener('click', showUsers)
 
 function showUsers() {
@@ -23,17 +21,22 @@ function showUsers() {
     .then(x => x.json())
     .then(users => {
         for (let i = 0; i < users.length; i++) {
-            console.log(users[i])
-
             const card = document.createElement('div')
             card.style.border = '2px solid black'
+            card.style.marginBottom = '10px'
             document.getElementById('output').appendChild(card)
+
             const loginIngo = document.createElement('h3')
             loginIngo.style.backgroundColor = 'gray'
             loginIngo.style.color = 'white'
-            loginIngo.innerText = users[i].login
-            const avatarUrlInfo = document.createElement('h4')
+            loginIngo.innerText = "User's login: " + users[i].login
+
+            const avatarUrlInfo = document.createElement('a')
             avatarUrlInfo.innerText = users[i].avatar_url
+            avatarUrlInfo.href = users[i].avatar_url
+            avatarUrlInfo.target = '_blank'
+            avatarUrlInfo.style.color = 'brown'
+            
             card.append(loginIngo, avatarUrlInfo)
         }
     })
