@@ -7,8 +7,6 @@ Metodas:
 wasExpensive() - jeigu filmo budget bus didesnę nei 100 000 000 mln USD, tada gražins true, kiru atveju false 
 ------------------------------------------------------------------------------------------------------ */
 
-console.log('labas')
-
 class Movie {
     constructor(title, director, budget) {
         this.title = title;
@@ -18,11 +16,6 @@ class Movie {
     wasExpensive() {
         const bln = Boolean(this.budget > 100000000)
         console.log(bln)
-        // if (this.budget > 100000000) {
-        //     console.log('true')
-        // } else {
-        //     console.log('false')
-        // }
     }
 }
 const movie1 = new Movie('Titanic', 'J. Cameron', 200000000)
